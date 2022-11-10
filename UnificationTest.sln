@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C38C9686-EFD4-4941-A868-3A7EE16F28FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnificationTest", "src\UnificationTest\UnificationTest.csproj", "{4FAAA5D4-50CD-47FF-93DF-D69E04E11FC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnificationTest.Tests", "src\UnificationTest.Tests\UnificationTest.Tests.csproj", "{26C36DAA-B943-4BFD-9835-F332C861E603}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4FAAA5D4-50CD-47FF-93DF-D69E04E11FC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FAAA5D4-50CD-47FF-93DF-D69E04E11FC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FAAA5D4-50CD-47FF-93DF-D69E04E11FC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FAAA5D4-50CD-47FF-93DF-D69E04E11FC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26C36DAA-B943-4BFD-9835-F332C861E603}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26C36DAA-B943-4BFD-9835-F332C861E603}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26C36DAA-B943-4BFD-9835-F332C861E603}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26C36DAA-B943-4BFD-9835-F332C861E603}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4FAAA5D4-50CD-47FF-93DF-D69E04E11FC8} = {C38C9686-EFD4-4941-A868-3A7EE16F28FD}
+		{26C36DAA-B943-4BFD-9835-F332C861E603} = {C38C9686-EFD4-4941-A868-3A7EE16F28FD}
+	EndGlobalSection
+EndGlobal
