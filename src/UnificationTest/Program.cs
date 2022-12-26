@@ -28,9 +28,21 @@ IReadOnlyList<Ast.Stmt> statements = new Ast.Stmt[]
 
 var symbols = SymbolResolution.Resolve(statements);
 
-var types = Unification.Unify(statements, symbols);
+Unification.Unify(new TypeVariable(), new NameType("int32"));
 
-foreach (var (symbol, type) in types)
-{
-    Console.WriteLine($"'{symbol}' has type '{type}'");
-}
+var invokeExpr = (Ast.Expr.Invoke)((Ast.Stmt.Declare)statements[1]).Initializer!;
+var funcType = new FunctionType(Array.Empty<IType>(), new NameType("int32")); // TypeOf(invokeExpr.Identifier)
+var argsType = Array.Empty<IType>(); // invokeExpr.Args.Select(TypeOf)
+var returnType = new TypeVariable();
+var callSiteFuncType = new FunctionType(argsType, returnType);
+Unification.Unify(funcType, callSiteFuncType);
+var actualReturnType = returnType.Substitution;
+
+var a = new FunctionType(new IType[] { new NameType("a"), new NameType("b") }, new NameType("c"));
+var b = new FunctionType(new IType[] { new TypeVariable(), new NameType("b") }, new TypeVariable());
+Unification.Unify(a, b);
+
+Unification.Unify(new TypeVariable(), new TypeVariable());
+
+var t = new TypeVariable();
+Unification.Unify(t, t);
